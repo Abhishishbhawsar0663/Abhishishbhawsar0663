@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        th, td{
+border: 1px solid black;
+padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Code With Abhi</h1>
+   <table style="text-align: center;">
+    <thead>
+        <tr>
+        <th>Name</th>
+        <th>User_Name</th>
+        <th>Email_id</th>
+    </tr>
+    </thead>
+<tbody id="table_body">
+
+</tbody>
+   </table>
+    <script src="fatch.js"></script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login Popup</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <button onclick="showPopup('success')">Login Success</button>
+  <button onclick="showPopup('error')">Login Failed</button>
+
+  <div id="popup" class="popup">
+    <h3 id="popup-title"></h3>
+    <p id="popup-message"></p>
+    <div class="popup-buttons">
+      <button onclick="closePopup()">OK</button>
+      <button class="secondary" onclick="closePopup()">Cancel</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,233 @@
+/* GOOGLE FONT */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* BODY */
+body {
+    min-height: 100vh;
+    background: radial-gradient(circle at top, #3a1c71, #1a082d);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+/* CONTAINER */
+.container {
+    width: 95%;
+    max-width: 1400px;
+    height: 90vh;
+    display: flex;
+    border-radius: 22px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(14px);
+    box-shadow: 0 30px 60px rgba(0,0,0,0.5);
+    animation: fadeIn 1s ease;
+}
+
+/* ========== ASIDE ========== */
+.aside {
+    width: 260px;
+    padding: 20px;
+    background: linear-gradient(180deg, #4b1d8f, #2a0f4f);
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+/* ROBOT ICON */
+.icon {
+    height: 70px;
+    border-radius: 18px;
+    background: rgba(255,255,255,0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 34px;
+    cursor: pointer;
+    animation: float 2.5s ease-in-out infinite;
+    box-shadow: 0 0 20px #b56cff;
+}
+
+/* SEARCH / CHAT BAR */
+.chatbar {
+    height: 45px;
+    border-radius: 14px;
+    background: rgba(255,255,255,0.12);
+    position: relative;
+}
+
+.chatbar::after {
+    content: "🔍 Search";
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 13px;
+    opacity: 0.7;
+}
+
+/* CHAT LIST */
+.chatlist {
+    flex: 1;
+    padding: 15px;
+    border-radius: 16px;
+    background: rgba(255,255,255,0.1);
+    overflow-y: auto;
+}
+
+/* ========== MAIN ========== */
+.main {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* NAVBAR */
+.navbar {
+    height: 60px;
+    border-radius: 16px;
+    background: linear-gradient(90deg, #7f00ff, #e100ff);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    box-shadow: 0 15px 30px rgba(127,0,255,0.4);
+}
+
+/* NAVBAR TEXT + ICONS */
+.navbar::before {
+    content: "🤖 ERA_GEN AI";
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.navbar::after {
+    content: "🔔 ⚙️ 👤";
+    font-size: 18px;
+}
+
+/* BOT MESSAGE */
+.meassage-bot {
+    margin-top: 25px;
+    max-width: 65%;
+    padding: 15px 20px;
+    background: rgba(255,255,255,0.15);
+    border-radius: 20px 20px 20px 6px;
+    animation: popUp 0.6s ease;
+    box-shadow: 0 0 15px rgba(255,255,255,0.2);
+}
+
+/* USER INPUT AREA */
+.message-user {
+    margin-top: auto;
+    padding: 15px;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    border-radius: 18px;
+    background: rgba(255,255,255,0.12);
+    backdrop-filter: blur(10px);
+}
+.msguser {
+    margin-top: auto;
+    padding: 15px;
+    display: flex;
+    gap: 12px;
+    align-items: flex-end;
+    border-radius: 18px;
+    background: rgba(255,255,255,0.12);
+    backdrop-filter: blur(10px);
+    /* background-color: aqua; */
+    flex-direction: row-reverse;
+}
+
+/* INPUT */
+.message-user input {
+    flex: 1;
+    height: 46px;
+    border-radius: 25px;
+    border: none;
+    outline: none;
+    padding: 0 20px;
+    font-size: 14px;
+    background: rgba(255,255,255,0.2);
+    color: #fff;
+}
+
+.message-user input::placeholder {
+    color: #ddd;
+}
+
+/* SEND BUTTON */
+.button button {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    background: linear-gradient(135deg, #7f00ff, #e100ff);
+    box-shadow: 0 10px 25px rgba(225,0,255,0.6);
+    transition: 0.3s;
+}
+
+.button button::after {
+    content: "🚀";
+    font-size: 18px;
+}
+
+.button button:hover {
+    transform: scale(1.15) rotate(15deg);
+}
+
+/* ========== ANIMATIONS ========== */
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.96); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes popUp {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes float {
+    0%,100% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 900px) {
+    .aside {
+        width: 70px;
+        padding: 10px;
+    }
+
+    .chatbar, .chatlist {
+        display: none;
+    }
+
+    .icon {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        height: 100vh;
+        border-radius: 0;
+    }
+
+    .meassage-bot {
+        max-width: 85%;
+    }
+}
